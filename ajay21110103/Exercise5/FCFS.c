@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /*
-Implementation of FCFS
+Implementation of FCFS Scheduling 
+Works for Even Delay Arrival Process
+Usage Whatever you begin with is your serialised ordered process ie.. first one is P1 
+you can give whatever burst time and arrival time it should be good to go
 */
 void swap(int *a ,int *b){
 	int tmp=*a;
@@ -46,11 +49,9 @@ int main(){
 	for (int i=0;i<num;i++){
 
 		idx=min(proctable,i,num);
-	//	printf("%d\n==",idx);
-		//printf("\n%d %d\n ",proctable[idx][0],proctable[idx][1]);
+	
 		idxarr[ct++]=idx;
-		//ct++;
-		//printf("\n%d\n",idx+i);
+		
 		swap(&proctable[i][0],&proctable[idx][0]);
 		swap(&proctable[i][1],&proctable[idx][1]);
 
