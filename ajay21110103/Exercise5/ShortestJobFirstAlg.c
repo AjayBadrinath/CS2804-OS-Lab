@@ -1,19 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int min(int proc[][3],int start,int arrlen){
-	int mins =proc[start][1];
-	int i;
-	int minidx;
-	for(i=start;i<arrlen;i++){
-		if(proc[i][1]<=mins){
-			minidx=i;
-			mins=proc[i][1];
-		}
-	}
-	return minidx;
-
-}
 int is_vis(int *vis,int pid,int vislen){
 	for(int i=0;i<vislen;i++){if(pid==vis[i]){return 1;}}
 	return 0;
