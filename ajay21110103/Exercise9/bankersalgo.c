@@ -81,19 +81,3 @@ for(int i=0;i<n_proc;i++){printf("%d\t",vis[i]);}
 printf(">\n");
 return 1;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
